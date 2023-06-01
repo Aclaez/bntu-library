@@ -1,0 +1,48 @@
+// colors
+$black: #333333;
+$black60: #767676;
+$black40: #929292;
+$black20: #cccccc;
+$black10: #dcdcdc;
+$black5: #e8e8e8;
+$black-desaturated: #f2f2f2;
+$green-primary: #008054;
+$green-hover: #006642;
+$green-80: #319774;
+$green-60: #62ae94;
+$green-40: #92c6b4;
+$green-20: #c3ddd4;
+$green-desaturated: #dce8e4;
+$purple: #211e57;
+$purple-dark: #4f4e76;
+$purple-light: #8280c2;
+$purple-desaturated: #f1eefa;
+$light-purple-label: #ece5f1;
+$lime: #bfd772;
+$pastel-lime: #d4ddb7;
+$pink: #e9cff9;
+$blue: #88bdef;
+$green-label: #344f40;
+$light-green-label: #dbeddb;
+
+// fonts
+
+// layout
+@mixin interactive-el {
+  cursor: pointer;
+}
+
+@mixin flex($_dir, $_jc, $_ai) {
+  display: flex;
+  flex-direction: $_dir;
+  justify-content: $_jc;
+  align-items: $_ai;
+}
+
+@mixin font($_weight, $_size, $_height) {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: $_weight;
+  font-size: $_size;
+  line-height: $_height;
+}

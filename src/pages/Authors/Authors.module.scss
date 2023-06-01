@@ -1,0 +1,13 @@
+@import "../../styles/variables.scss";
+
+.informer {
+  background: #fff;
+  padding: 30px 20px;
+  width: 90%;
+  margin: 40px auto 0;
+  border-radius: 16px;
+
+  .text {
+    @include font(400, 16px, 16px);
+  }
+}

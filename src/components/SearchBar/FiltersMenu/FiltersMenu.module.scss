@@ -1,0 +1,98 @@
+@import "../../../styles/variables.scss";
+
+.filtersMenu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  width: 782px;
+  background: #fff;
+  box-shadow: 0px 4px 8px 3px rgba(0, 0, 0, 0.15),
+    0px 1px 3px rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+  padding: 30px 20px;
+  z-index: 10;
+  @include flex(column, flex-start, stretch);
+
+  h6 {
+    @include font(400, 17px, 20px);
+    color: $black;
+    margin-bottom: 14px;
+  }
+}
+
+.title {
+  @include font(700, 24px, 28px);
+  margin-bottom: 24px;
+}
+
+.btnGroup {
+  @include flex(row, flex-start, center);
+  gap: 8px;
+}
+
+.main {
+  @include flex(row, space-between, flex-start);
+}
+
+.columns,
+.access {
+  margin-bottom: 24px;
+}
+
+.fieldFilters {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  column-gap: 50px;
+  margin-bottom: 24px;
+}
+
+.footer {
+  @include flex(row, flex-end, center);
+  margin-top: 24px;
+}
+
+.checkbox {
+  margin-bottom: 16px;
+  //   @include flex(row, flex-start, center);
+
+  input {
+    display: none;
+  }
+
+  label {
+    @include flex(row, flex-start, center);
+    cursor: pointer;
+
+    .visibleCheckbox {
+      display: block;
+      width: 24px;
+      height: 24px;
+      border: 1px solid $black20;
+      border-radius: 1px;
+      @include flex(row, center, center);
+
+      svg {
+        display: none;
+      }
+    }
+  }
+
+  input:checked ~ label > .visibleCheckbox {
+    color: #fff;
+    background: $green-primary;
+    border-color: $green-primary;
+
+    svg {
+      display: block;
+      path {
+        fill: currentColor;
+      }
+    }
+  }
+}
+
+.checkboxText {
+  margin-left: 15px;
+  @include font(400, 17px, 20px);
+}

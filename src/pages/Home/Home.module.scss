@@ -1,0 +1,105 @@
+@import "../../styles/variables.scss";
+
+.container {
+  background-color: $green-desaturated;
+  max-width: 1440px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.header {
+  padding: 20px 24px;
+}
+
+.nav {
+  @include flex(row, flex-end, center);
+
+  a {
+    margin-right: 16px;
+    @include font(400, 14px, 16px);
+    text-decoration: none;
+  }
+}
+
+.main {
+  background-color: #fff;
+  margin: 0 24px;
+  margin-bottom: 114px;
+  border-radius: 16px;
+  padding: 57px 0;
+  @include flex(column, flex-start, center);
+}
+
+.logo {
+  height: 90px;
+  width: auto;
+}
+
+.content {
+  margin: 80px 0;
+  @include flex(column, flex-start, center);
+}
+
+.contentText {
+  width: 70%;
+  @include font(400, 17px, 20px);
+  color: $black;
+  margin: 40px 0;
+  text-align: center;
+}
+
+.pageCardList {
+  width: 100%;
+  padding: 0 120px;
+  box-sizing: border-box;
+  @include flex(row, space-between, center);
+}
+
+.pageCard {
+  background-color: $green-desaturated;
+  width: 31.5%;
+  border-radius: 16px;
+  height: auto;
+  padding: 30px 20px;
+  box-sizing: border-box;
+
+  .icon {
+    width: 40px;
+    height: auto;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: $green-primary;
+    @include flex(row, center, center);
+
+    svg {
+      width: 24px;
+      height: auto;
+
+      path {
+        stroke: #fff;
+        fill: #fff;
+        stroke-width: 0.5px;
+      }
+    }
+  }
+
+  .title {
+    @include font(700, 24px, 28px);
+    color: $black;
+    margin-top: 20px;
+    margin-bottom: 8px;
+  }
+
+  .text {
+    @include font(700, 14px, 16px);
+    color: $black40;
+    margin-bottom: 20px;
+    word-break: break-all;
+  }
+
+  .link {
+    @include font(700, 14px, 16px);
+    color: $green-primary;
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,165 @@
+@import "../../styles/variables.scss";
+
+.page {
+  svg {
+    width: 24px;
+    height: 24px;
+    path {
+      fill: $black60;
+    }
+  }
+}
+
+.burger {
+  width: 40px;
+  height: 40px;
+  background: $black-desaturated;
+  border-radius: 6px;
+  @include flex(row, center, center);
+  cursor: pointer;
+
+  svg > path {
+    fill: $black;
+  }
+}
+
+.pageIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  @include flex(row, center, center);
+  cursor: pointer;
+}
+
+.activePageIcon {
+  background: $green-desaturated;
+
+  svg > path {
+    fill: $green-primary;
+  }
+}
+
+.sidebarSmall {
+  width: 72px;
+  min-height: 100vh;
+  background: #fff;
+  border-radius: 0px 6px 6px 0px;
+  @include flex(column, flex-start, center);
+  padding-top: 38px;
+  box-sizing: border-box;
+
+  .burger {
+    margin-bottom: 43px;
+  }
+}
+
+.sidebar {
+  width: 258px;
+  min-height: 100vh;
+  background: #fff;
+  border-radius: 0px 6px 6px 0px;
+  @include flex(column, flex-start, flex-start);
+  padding-top: 38px;
+  padding-bottom: 30px;
+  padding-left: 16px;
+  box-sizing: border-box;
+
+  .sidebarTop {
+    @include flex(row, space-between, flex-start);
+    margin-bottom: 25px;
+  }
+
+  .title {
+    @include font(600, 20px, 26px);
+    font-family: "Roboto Slab";
+    text-align: left;
+    margin-left: 10px;
+    margin-top: 5px;
+
+    .greenPart {
+      color: $green-primary;
+    }
+  }
+
+  .burger {
+    background: none;
+  }
+
+  ul {
+    width: 100%;
+  }
+
+  .caption {
+    margin-top: auto;
+    @include font(400, 14px, 16px);
+    color: $black60;
+    margin-left: 8px;
+  }
+}
+
+.groupTab {
+  width: 100%;
+  @include flex(row, flex-start, center);
+  cursor: pointer;
+  border-radius: 6px 0 0 6px;
+
+  .title {
+    @include font(400, 14px, 16px);
+    color: $black60;
+  }
+
+  &:hover {
+    background-color: $black-desaturated;
+  }
+}
+
+.activeGroupTab {
+  margin-bottom: 7px;
+}
+
+.pageTab {
+  @include flex(row, flex-start, center);
+  margin-left: 7px;
+  margin-right: 3px;
+  width: calc(100% - 10px);
+  height: 100%;
+  border-radius: 6px;
+  color: $black60;
+  padding-left: 10px;
+  padding-right: 5px;
+  box-sizing: border-box;
+  margin-bottom: 1px;
+
+  svg {
+    height: 20px;
+    width: auto;
+  }
+
+  .title {
+    @include font(400, 14px, 16px);
+    overflow-wrap: break-word;
+    width: calc(100% - 50px);
+    padding: 11px 0;
+  }
+
+  &:hover {
+    background-color: $black-desaturated;
+  }
+}
+
+.activePageTab {
+  background-color: $green-desaturated;
+  color: $green-primary;
+
+  .title {
+    font-weight: 700;
+  }
+
+  svg > path {
+    fill: currentColor;
+  }
+
+  &:hover {
+    background-color: rgba($green-desaturated, 0.7);
+  }
+}

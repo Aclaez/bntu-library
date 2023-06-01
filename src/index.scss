@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto';
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+@import './fonts/fonts.scss';

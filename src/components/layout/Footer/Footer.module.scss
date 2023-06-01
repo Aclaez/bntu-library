@@ -1,0 +1,50 @@
+@import "../../../styles/variables.scss";
+
+.footer {
+  width: 100%;
+  min-height: 430px;
+  padding: 62px 120px 0;
+  background-color: $black-desaturated;
+  @include flex(column, flex-start, center);
+}
+
+.top {
+  @include flex(row, space-between, flex-start);
+  width: 100%;
+}
+
+.col {
+  width: 14.59%;
+}
+
+.colTitle {
+  @include font(700, 16px, 19px);
+  color: $black;
+  margin-bottom: 16px;
+}
+
+.link {
+  display: block;
+  @include font(400, 14px, 16px);
+  color: $black;
+  margin-bottom: 8px;
+}
+
+.quote {
+  width: 210px;
+  @include font(40, 30px, 35px);
+  color: $black60;
+}
+
+.social {
+  margin-left: auto;
+}
+
+.socialLinks {
+  @include flex(row, space-between, flex-start);
+  margin-top: 65px;
+}
+
+.socialLink {
+    margin-right: 10px;
+}

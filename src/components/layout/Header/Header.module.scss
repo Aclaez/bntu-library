@@ -1,0 +1,82 @@
+@import "../../../styles/variables.scss";
+
+.header {
+  width: 100%;
+  padding: 40px 70px 5px;
+  box-sizing: border-box;
+  min-height: 130px;
+  @include flex(row, center, flex-start);
+}
+
+.logo {
+  height: 90px;
+  width: 90px;
+  margin: 0 auto;
+}
+
+.menuSwitch {
+  background: none;
+  outline: none;
+  border: none;
+  @include interactive-el;
+
+  svg {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.menuGroup {
+  position: relative;
+}
+
+.menu {
+  // width: 567px;
+  // height: 323px;
+  position: absolute;
+  top: 100%;
+  right: 100%;
+  background: #ffffff;
+  box-shadow: 0px 4px 30px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  z-index: 10;
+  padding: 40px 70px;
+}
+
+.menuTitle {
+  font-family: "Roboto Slab";
+  @include font(600, 30px, 40px);
+  color: $black;
+  margin-bottom: 36px;
+}
+
+.greenPart {
+  color: $green-primary;
+}
+
+.menuLink {
+  color: $black60;
+  margin-bottom: 12px;
+
+  svg {
+    width: 22px;
+    height: 22px;
+    margin-right: 21px;
+
+    path {
+      fill: currentColor;
+    }
+  }
+
+  a {
+    @include font(400, 14px, 16px);
+    @include flex(row, flex-start, center);
+  }
+}
+
+.activeLink {
+  color: $green-primary;
+  a {
+    font-weight: 700;
+  }
+}

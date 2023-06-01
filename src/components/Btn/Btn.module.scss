@@ -1,0 +1,45 @@
+@import "../../styles/variables.scss";
+
+.btn {
+  border: 1px solid $green-primary;
+  border-radius: 6px;
+  background: transparent;
+  @include flex(row, space-between, center);
+  @include font(400, 14px, 16px);
+  color: $green-primary;
+  padding: 12px;
+  cursor: pointer;
+  z-index: 0;
+
+  svg {
+    width: 16px;
+    height: auto;
+    margin-right: 10px;
+  }
+
+  svg > path {
+    fill: currentColor;
+  }
+
+  @include font(400, 14px, 16px);
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.fillGreen {
+  background: $green-primary;
+  @include font(400, 14px, 16px);
+  color: #ffffff;
+  border: none;
+}
+
+.noBorder {
+  border: none;
+}
+
+.gray {
+  background: $black-desaturated;
+  border: 1px solid $black20;
+  color: $black60;
+}

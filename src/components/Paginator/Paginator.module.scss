@@ -1,0 +1,82 @@
+@import "../../styles/variables.scss";
+
+.paginator {
+  margin: 0 auto;
+  @include flex(row, center, center);
+  gap: 16px;
+
+  button {
+    cursor: pointer;
+  }
+}
+
+.back,
+.next {
+  border: none;
+  background: none;
+  padding: 0;
+  height: 30px;
+  width: 30px;
+  @include flex(row, center, center);
+  z-index: 1;
+
+  svg {
+    height: 15px;
+    width: auto;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:disabled {
+    color: $black60;
+  }
+}
+
+.back {
+  svg {
+    transform: rotate(90deg);
+  }
+}
+
+.next {
+  svg {
+    transform: rotate(-90deg);
+  }
+}
+
+.pages {
+  @include flex(row, center, center);
+  gap: 16px;
+}
+
+.pageCircle {
+  border: none;
+  background: none;
+  color: $black;
+  width: 30px;
+  height: 30px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  &:hover {
+    background-color: $green-desaturated;
+  }
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0.5px;
+}
+
+.dots:hover {
+  cursor: auto;
+  background: none;
+}
+
+.activePageCircle {
+  background-color: $green-primary;
+  color: #fff;
+
+  &:hover {
+    background-color: rgba($green-primary, 0.9);
+  }
+}

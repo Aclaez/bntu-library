@@ -1,0 +1,78 @@
+@import "../../styles/variables.scss";
+
+.tree {
+  position: relative;
+  @include flex(column, flex-start, center);
+  padding-bottom: 150px;
+
+  ul {
+    width: 100%;
+  }
+}
+
+.node {
+  width: 12px;
+  height: auto;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: $black;
+  position: absolute;
+}
+
+.itemLeft,
+.itemRight {
+  width: 50%;
+  box-sizing: border-box;
+  position: relative;
+  top: 50%;
+  padding: 35px 55px;
+}
+
+.itemLeft {
+  margin-right: auto;
+
+  a {
+    @include flex(row, flex-end, center);
+  }
+
+  .node {
+    right: -7px;
+  }
+
+  .text {
+    margin-right: 46px;
+    text-align: right;
+  }
+}
+
+.itemRight {
+  margin-left: auto;
+
+  a {
+    @include flex(row, flex-start, center);
+  }
+
+  .node {
+    left: -5px;
+  }
+
+  .text {
+    margin-left: 46px;
+    text-align: left;
+  }
+}
+
+.line {
+  width: 0px;
+  height: 100%;
+  border: 1px solid $black;
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+
+.text {
+  @include font(700, 24px, 28px);
+  color: $black;
+  max-width: 60%;
+}

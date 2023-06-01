@@ -1,0 +1,11 @@
+@import "../../styles/variables.scss";
+
+.title {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 55px;
+  color: $black;
+  max-width: 450px;
+}
